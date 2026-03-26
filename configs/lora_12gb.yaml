@@ -1,0 +1,11 @@
+# LoRA Fine-Tuning - 12GB VRAM
+model_name: "mistralai/Mistral-7B-Instruct-v0.3"
+method: "lora"
+rank: 16
+alpha: 32
+batch_size: 2
+gradient_accumulation_steps: 4
+max_length: 512
+num_epochs: 3
+learning_rate: 2.0e-4
+load_in_4bit: false

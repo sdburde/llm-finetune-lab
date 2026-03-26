@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-finetune-lab"
+version = "1.0.0"
+description = "Production-grade toolkit for fine-tuning Large Language Models with LoRA, QLoRA, SFT, DPO, and RLHF"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "sdburde", email = "saurabhburde1996@gmail.com"}
+]
+keywords = [
+    "llm",
+    "fine-tuning",
+    "lora",
+    "qlora",
+    "peft",
+    "transformers",
+    "huggingface",
+    "ollama",
+    "llama",
+    "mistral",
+    "qwen",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "transformers>=4.40.0",
+    "peft>=0.12.0",
+    "datasets>=2.14.0",
+    "accelerate>=0.27.0",
+    "trl>=0.8.6",
+    "bitsandbytes>=0.43.0",
+    "scipy>=1.11.0",
+    "matplotlib>=3.7.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.0.0",
+]
+ollama = [
+    "requests>=2.31.0",
+]
+all = [
+    "llm-finetune-lab[dev,ollama]",
+]
+
+[project.urls]
+Homepage = "https://github.com/sdburde/llm-fine-tuning"
+Repository = "https://github.com/sdburde/llm-fine-tuning.git"
+Documentation = "https://github.com/sdburde/llm-fine-tuning/tree/main/docs"
+Issues = "https://github.com/sdburde/llm-fine-tuning/issues"
+
+[project.scripts]
+llm-train = "scripts.train:main"
+llm-infer = "scripts.infer:main"
+llm-convert = "scripts.convert:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

@@ -1,0 +1,11 @@
+# DPO Fine-Tuning - 16GB VRAM
+model_name: "microsoft/Phi-3-mini-instruct"
+method: "dpo"
+rank: 16
+alpha: 32
+batch_size: 1
+gradient_accumulation_steps: 4
+max_length: 512
+num_epochs: 2
+learning_rate: 5.0e-7
+beta: 0.1

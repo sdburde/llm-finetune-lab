@@ -1,0 +1,28 @@
+# LLM Fine-Tuning Toolkit - Core Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core ML Libraries
+transformers>=4.40.0
+peft>=0.12.0
+datasets>=2.14.0
+accelerate>=0.27.0
+trl>=0.8.6
+
+# Quantization
+bitsandbytes>=0.43.0
+
+# Utilities
+scipy>=1.11.0
+matplotlib>=3.7.0
+pyyaml>=6.0
+tqdm>=4.65.0
+psutil>=5.9.0
+
+# Optional: For Ollama integration
+requests>=2.31.0
+
+# Optional: For development
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.5.0
