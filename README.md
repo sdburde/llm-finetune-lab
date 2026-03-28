@@ -422,11 +422,11 @@ services:
 
 ## 🤝 Contributing
 
-This is a **solo-maintained project** by [sdburde](https://github.com/sdburde).
+This **project maintained** by [sdburde](https://github.com/sdburde).
 
 **Bug Reports & Feature Requests:** Welcome via GitHub Issues!
 
-**Code Contributions:** Currently not accepting PRs, but feel free to fork!
+feel free to fork!
 
 ---
 
@@ -555,7 +555,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 **Made with ❤️ by [sdburde](https://github.com/sdburde)**
 
-**Solo Maintained** | **Production Ready** | **100% Tested**
+**Production Ready** | **100% Tested**
 
 ---
 
