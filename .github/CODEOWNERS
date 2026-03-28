@@ -1,0 +1,10 @@
+# LLM Fine-Tuning Toolkit
+
+## Quick Start
+```bash
+git clone https://github.com/sdburde/llm-finetune-lab.git
+cd llm-fine-tuning
+pip install -r requirements.txt
+python scripts/finetune.py --method qlora --vram 8
+```
+

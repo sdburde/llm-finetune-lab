@@ -124,3 +124,37 @@ temp/
 # OS
 Thumbs.db
 .DS_Store
+
+# Study notes (keep local, not in repo)
+study/
+
+# Test results and analysis (keep local, not in repo)
+test_results_and_analysis/
+test_results/
+*.json
+TEST_REPORT.md
+ALPACA_TEST_RESULTS.md
+DOCKER_TEST_RESULTS.md
+alpaca_test_output.log
+
+# Virtual environments
+ftpyenv/
+venv/
+.venv/
+env/
+
+# Cloned repositories (llama.cpp)
+llama.cpp/
+
+# Model outputs
+models/
+output/
+outputs/
+adapters/
+merged/
+study/
+checkpoints/
+*.gguf
+
+# Empty folders
+examples/

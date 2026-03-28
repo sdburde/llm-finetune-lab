@@ -60,6 +60,9 @@ class FineTuningConfig:
     beta1: float = 0.9
     beta2: float = 0.95
     
+    # DPO specific
+    beta: float = 0.1  # Added for DPO support
+    
     # Output settings
     output_dir: str = "./output"
     adapter_dir: str = "./adapter"
