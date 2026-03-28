@@ -273,38 +273,6 @@ curl http://localhost:7860/v1/generate \
   -d '{"model": "my-model", "prompt": "Hello!"}'
 ```
 
----
-
-## 📚 Documentation
-
-### Getting Started
-
-| Document | Description | Time |
-|----------|-------------|------|
-| [QUICKSTART.md](docs/QUICKSTART.md) | 5-minute setup guide | 5 min |
-| [WEB_UI_GUIDE.md](docs/WEB_UI_GUIDE.md) | Web UI complete guide | 15 min |
-| [CUSTOM_DATA_GUIDE.md](docs/CUSTOM_DATA_GUIDE.md) | Custom dataset tutorial | 10 min |
-
-### Study Notes
-
-| Document | Description | Time |
-|----------|-------------|------|
-| [01_FUNDAMENTALS.md](study/01_FUNDAMENTALS.md) | Fine-tuning basics | 2 hours |
-| [02_ADVANCED_METHODS.md](study/02_ADVANCED_METHODS.md) | Advanced methods | 2 hours |
-| [03_EVALUATION_METRICS.md](study/03_EVALUATION_METRICS.md) | Evaluation metrics | 1 hour |
-| [04_QUANTIZATION_VRAM.md](study/04_QUANTIZATION_VRAM.md) | VRAM management | 1 hour |
-| [05_ALL_METHODS_COMPLETE.md](study/05_ALL_METHODS_COMPLETE.md) | All 10 methods | 3 hours |
-
-### Technical Guides
-
-| Document | Description |
-|----------|-------------|
-| [VRAM_RAM_MANAGEMENT.md](docs/VRAM_RAM_MANAGEMENT.md) | VRAM optimization for all GPUs |
-| [MODEL_NAMING.md](docs/MODEL_NAMING.md) | Auto-generated naming convention |
-| [ALPACA_TEST_RESULTS.md](ALPACA_TEST_RESULTS.md) | Alpaca dataset test results |
-| [TEST_REPORT.md](TEST_REPORT.md) | Comprehensive test report |
-
----
 
 ## 🔧 Configuration
 
