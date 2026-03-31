@@ -1,11 +1,25 @@
 # 🚀 LLM Fine-Tuning Toolkit
 
-> **Fine-tune Large Language Models on your GPU**
+> **Fine-tune Large Language Models on your consumer GPU**
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tested: RTX 3070 Ti](https://img.shields.io/badge/tested-RTX%203070%20Ti-76b900)](https://www.nvidia.com)
 [![Methods: 6/6](https://img.shields.io/badge/methods-6%2F6%20tested-brightgreen)](test_results_and_analysis/ALL_METHODS_10EPOCH_REPORT.md)
+
+---
+
+## 🎬 Web UI Preview
+
+![Fine-Tuning Web UI Demo](gifs/fine_tuning.gif)
+
+> **✨ Interactive Web UI included!**
+> - Real-time training logs & loss tracking
+> - VRAM-based parameter recommendations
+> - Inference playground for testing models
+> - Model evaluation with metrics
+
+**Quick Start:** `./run.sh` → Open http://localhost:7860
 
 ---
 

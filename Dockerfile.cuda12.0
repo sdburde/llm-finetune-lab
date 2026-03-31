@@ -1,7 +1,8 @@
 # LLM Fine-Tuning Toolkit - Docker Image
-# CUDA 12.1.1 (compatible with NVIDIA Driver 570.211.01 / CUDA 12.8)
+# CUDA 12.0.1 (for systems with older NVIDIA drivers - version 12080)
+# Use this if you get "driver is too old" error with CUDA 12.1
 
-FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.0.1-cudnn8-runtime-ubuntu22.04
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -25,7 +26,6 @@ WORKDIR /app
 # Copy requirements first (for caching)
 COPY requirements.txt .
 
-# Install Python dependencies
 # CRITICAL: Pin numpy to avoid compatibility issues
 RUN pip3 install --no-cache-dir "numpy<2.0" && \
     pip3 install --no-cache-dir -r requirements.txt && \
@@ -44,7 +44,7 @@ RUN mkdir -p /app/models /app/data /app/test_results
 VOLUME ["/app/models", "/app/data", "/app/test_results"]
 
 # Expose ports
-EXPOSE 7860
+EXPOSE 7860 8000
 
 # Default command - start Web UI
 CMD ["python3", "app/gradio_app.py"]
