@@ -319,7 +319,7 @@ This toolkit builds on amazing open-source work:
 
 ---
 
-**Made with ❤️ by [sdburde](https://github.com/sdburde)**
+**Made by [sdburde](https://github.com/sdburde)**
 
 **Solo Maintained** | **Production Ready** | **Tested on 8GB VRAM**
 
