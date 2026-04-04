@@ -4,38 +4,23 @@
 services:
   # Web UI Service with GPU
   llm-finetuning:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: llm-fine-tuning:latest
+    image: fine-tunning
     container_name: llm-finetuning
-    
-    # GPU Access - CRITICAL
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              device_ids: ['0']
-              capabilities: [gpu]
-    
-    # NVIDIA runtime
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=all
-      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
-    
-    # Port mapping
+    command: python3 app/gradio_app.py
     ports:
       - "7860:7860"
-    
-    # Persistent storage
+    environment:
+      - GRADIO_SERVER_PORT=7860
+      - GRADIO_SERVER_NAME=0.0.0.0
+    working_dir: /app
     volumes:
+      - ./app:/app/app
       - ./models:/app/models
       - ./data:/app/data
       - ./configs:/app/configs
-    
-    # Auto-restart
     restart: unless-stopped
+    privileged: true
+
     
     # Health check
     healthcheck:

@@ -1321,6 +1321,9 @@ if __name__ == "__main__":
         print(f"  {name:8s}  {info['vram_display']:24s}  {info['description'][:52]}…")
     print()
 
+    # Detect if running in Docker (check for .dockerenv or containerized environment)
+    in_docker = Path("/.dockerenv").exists() or os.environ.get("CONTAINER", "false").lower() == "true"
+    
     port = _find_free_port()
     print(f"Open in browser → http://localhost:{port}")
     print("=" * 60)
@@ -1329,6 +1332,6 @@ if __name__ == "__main__":
     ui.launch(
         server_name="0.0.0.0",
         server_port=port,
-        share=False,
+        share=in_docker,  # Enable share mode in Docker to avoid proxy issues
         show_error=True,
     )
